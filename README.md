@@ -15,7 +15,7 @@ Now it's installed :)
 # `setAnims()`
 Arguably the most important function!
 
-This function sets the animations that JaBPI uses for it's default animation updates
+This function sets the animations that JaBPI uses for its default animation updates
 
 Most likely, you'll want to put it in the `events.entity_init()` function
 
