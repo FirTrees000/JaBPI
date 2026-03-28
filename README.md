@@ -17,7 +17,7 @@ Arguably the most important function!
 
 This function sets the animations that JaBPI uses for its default animation updates
 
-Most likely, you'll want to put it in the `events.entity_init()` function
+Most likely, you'll want to put it in the `events.entity_init()` function in your main script
 
 
 This function takes 4 arguments
