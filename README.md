@@ -29,7 +29,7 @@ c = stuffing animation
 d = inflation animation
 ```
 
-generally you want to pick between using `b` alone or `c` and `d`
+generally you want to pick between using `b` alone / `c` and `d`
 
 They do the same thing, `c` and `d` just separate it out
 
