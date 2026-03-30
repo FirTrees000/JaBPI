@@ -27,7 +27,6 @@ a = fat animation
 b = fullness animation (stuffing + inflation)
 c = stuffing animation
 d = inflation animation
--- all should be entered as animations paths
 ```
 
 generally you want to pick between using `b` alone / `c` and `d`
@@ -36,12 +35,19 @@ They do the same thing, `c` and `d` just separate it out
 
 example:
 ```
+local fatAnim  = animations.[your model].[your fat animation]
+local fillAnim = animations.[your model].[your fill animation]
+
 event.entity_init()
 	jabpi.setAnims(fatAnim,fillAnim,nil,nil)
 end
 ```
 or
 ```
+local fatAnim       = animations.[your model].[your fat animation]
+local stuffingAnim  = animations.[your model].[your stuffing animation]
+local inflationAnim = animations.[your model].[your inflation animation]
+
 event.entity_init()
 	jabpi.setAnims(fatAnim,nil,stuffingAnim,inflationAnim)
 end
