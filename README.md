@@ -1,5 +1,5 @@
 # JaBPI
-An API for using Figura with JaB
+An API for using Figura with Just another Bite
 
 # Installation
 This works just like any other module, just copy the Lua file into the folder with your main script
