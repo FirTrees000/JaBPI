@@ -27,6 +27,7 @@ a = fat animation
 b = fullness animation (stuffing + inflation)
 c = stuffing animation
 d = inflation animation
+-- all should be entered as animations paths
 ```
 
 generally you want to pick between using `b` alone / `c` and `d`
