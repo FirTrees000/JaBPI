@@ -48,7 +48,7 @@ local fatAnim       = animations.[your model].[your fat animation]
 local stuffingAnim  = animations.[your model].[your stuffing animation]
 local inflationAnim = animations.[your model].[your inflation animation]
 
-event.entity_init()
+function events.entity_init()
 	jabpi.setAnims(fatAnim,nil,stuffingAnim,inflationAnim)
 end
 ```
