@@ -38,7 +38,7 @@ example:
 local fatAnim  = animations.[your model].[your fat animation]
 local fillAnim = animations.[your model].[your fill animation]
 
-event.entity_init()
+function event.entity_init()
 	jabpi.setAnims(fatAnim,fillAnim,nil,nil)
 end
 ```
