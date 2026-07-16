@@ -258,10 +258,12 @@ function events.tick()
 end
 
 function events.render(_,context)
-	updateVisualStats()
-	updateNStats()
-	if doAnims == true then
-		jabAnims()
+	if playerNbt["ForgeCaps"]["jab:player_variables"] ~= nil then
+		updateVisualStats()
+		updateNStats()
+		if doAnims == true then
+			jabAnims()
+		end
 	end
 end
 
