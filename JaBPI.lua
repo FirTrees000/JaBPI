@@ -246,23 +246,27 @@ end
 
 function events.tick()
 	playerNbt = player:getNbt()
-	if playerNbt["ForgeCaps"]["jab:player_variables"] ~= nil then
-		updateRawStats()
-		if timer >= 10 then
-			pings.statUpdate(functs.getFat(),functs.getFill(),functs.getStuffing(),functs.getInflation())
-			timer = 0
-		else
-			timer = timer + 1
+	if playerNbt["ForgeCaps"] ~= nil then
+		if playerNbt["ForgeCaps"]["jab:player_variables"] ~= nil then
+			updateRawStats()
+			if timer >= 10 then
+				pings.statUpdate(functs.getFat(),functs.getFill(),functs.getStuffing(),functs.getInflation())
+				timer = 0
+			else
+				timer = timer + 1
+			end
 		end
 	end
 end
 
 function events.render(_,context)
-	if playerNbt["ForgeCaps"]["jab:player_variables"] ~= nil then
-		updateVisualStats()
-		updateNStats()
-		if doAnims == true then
-			jabAnims()
+	if playerNbt["ForgeCaps"] ~= nil then
+		if playerNbt["ForgeCaps"]["jab:player_variables"] ~= nil then
+			updateVisualStats()
+			updateNStats()
+			if doAnims == true then
+				jabAnims()
+			end
 		end
 	end
 end
