@@ -37,6 +37,8 @@ local NStats = {
 
 local doAnims = true
 
+local clampNStats = false
+
 local anims = {
 	nil,
 	nil,
@@ -148,7 +150,11 @@ end
 
 function updateNStats()
 	for key, value in pairs(NStats) do
-		NStats[key] = (visualStats[key])/(maxStats[key])
+		if clampNStats == false then
+			NStats[key] = (visualStats[key])/(maxStats[key])
+		else
+			NStats[key] = math.clamp((visualStats[key])/(maxStats[key]),0,1)
+		end
 	end
 end
 
@@ -187,12 +193,16 @@ end
 
 
 
--------------------
--- Do Anim Logic --
--------------------
+-------------
+-- Toggles --
+-------------
 
 function functs.doAnimLogic(x)
 	doAnims = x
+end
+
+function functs.doNClamp(x)
+	clampNStats = x
 end
 
 -- End Do Anim Logic --
